@@ -1,0 +1,340 @@
+@charset "utf-8";
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #333333;
+    font-family: dnp-shuei-gothic-kin-std, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    font-feature-settings: "palt";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+body {
+    background: #fcfcfc;
+    overflow-x: hidden;
+}
+main {
+    padding: 0 20px;
+}
+.header_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+}
+.header_logo {
+    width: 143px;
+}
+@media screen and (max-width: 767px) {
+    .header_wrap {
+        padding: 40px 30px;
+    }
+    .header_logo {
+        width: 128px;
+        z-index: 4;
+    }
+}
+
+.pc_nav ul {
+    display: flex;
+}
+.pc_nav ul li {
+    padding-left: 70px;
+}
+.pc_nav ul li a {
+    font-family: asap, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.sp_btn,
+.sp_nav {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .pc_nav {
+        display: none;
+    }
+    /* ハンバーガー */
+    .sp_btn {
+        position: absolute;
+        top: 50px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+    }
+    .sp_btn span {
+        position: relative;
+        top: 10px;
+        display: block;
+        width: 33px;
+        height: 2px;
+        border-radius: 2px;
+        background: #333;
+        transition: 0.3s;
+        z-index: 4;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 33px;
+        height: 2px;
+        border-radius: 2px;
+        background: #333;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガー　閉じる */
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* デバイスの高さ100％ */
+        background-color: #9dc4c2;
+        z-index: 3;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: asap, sans-serif;
+    }
+}
+
+.heading {
+    font-family: asap, sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .heading {
+        font-size: 32px;
+    }
+}
+
+/* ボタン作る */
+.btnbox {
+    text-align: center;
+    margin-top: 80px;
+}
+/* ボタン共通設定 */
+
+.btn {
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 180px;
+    background: transparent;
+    /* かくっと下がる原因 */
+    /* border: solid 1px #333; */
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/*hoverをした後のボタンの形状*/
+.btn:hover {
+    border-color: transparent;
+}
+
+/*ボタンの中のテキスト*/
+.btn,
+.btn_color {
+    font-family: asap, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.btn span {
+    position: relative;
+    z-index: 2; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    box-sizing: border-box;
+    width: 180px;
+    padding: 15px 48px 12px;
+    color: #333;
+    border: solid 1px #333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+}
+
+/*== 右下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.btn_color:before {
+    content: "";
+    /* 絶対配置で影の位置を決める */
+    position: absolute;
+    z-index: -1;
+    top: 6px;
+    left: 6px;
+    /* 影の形状 */
+    width: 100%;
+    height: 100%;
+    background-color: #9dc4c2;
+}
+
+/*hoverの際にX・Y軸に6pxずらす*/
+.btn_color:hover span {
+    background-color: #9dc4c2;
+    border: solid 1px #333;
+    color: #333;
+    transform: translate(6px, 6px);
+}
+@media screen and (max-width: 767px) {
+    .btnbox {
+        margin-top: 35px;
+    }
+    .btn,
+    .btn span {
+        font-size: 14px;
+        width: 255px;
+    }
+}
+
+/* lightbox設定 */
+.lb-data .lb-number {
+    display: none !important;
+}
+/* lightbox左矢印消す */
+.lb-nav a.lb-prev {
+    width: 0;
+}
+
+.footer {
+    margin-top: 235px;
+    background-color: #9dc4c2;
+}
+
+.footer_pc_nav ul {
+    display: flex;
+    justify-content: center;
+}
+.footer_pc_nav ul li {
+    padding: 0 40px;
+}
+.footer_pc_nav ul li a {
+    font-family: asap, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.footer_icon {
+    margin: auto;
+    width: 43px;
+    padding: 40px 0 30px;
+}
+.copyright {
+    font-family: asap, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 65px 30px;
+}
+@media screen and (max-width: 767px) {
+    .footer {
+        margin-top: 180px;
+    }
+    .footer_pc_nav {
+        display: none;
+    }
+    .footer_icon {
+        margin: auto;
+        width: 43px;
+        padding-bottom: 0;
+    }
+    .copyright {
+        padding: 40px 20px;
+    }
+}
+
+.cta {
+    width: 75px;
+    position: fixed;
+    bottom: 30px;
+    right: 68px;
+    transition: all 0.3s ease;
+}
+.cta:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .cta {
+        width: 58px;
+        right: 15px;
+    }
+}

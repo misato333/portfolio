@@ -1,0 +1,899 @@
+@charset "utf-8";
+/* loadingページ */
+.loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #9dc4c2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loading_box {
+    max-width: 240px;
+    margin: 0 auto 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.loading_obj_1 {
+    top: -47%;
+    left: 3%;
+    width: 40px;
+}
+.loading_obj_2 {
+    width: 40px;
+}
+.loading_obj_3 {
+    width: 40px;
+}
+/* アニメーション */
+
+.loading_obj_1 {
+    animation: obj_1 ease-in-out 0.8s infinite alternate;
+    -webkit-animation: obj_1 ease-in-out 0.8s infinite alternate;
+    -moz-animation: obj_1 ease-in-out 0.8s infinite alternate;
+}
+@keyframes obj_1 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, -30px);
+    }
+}
+@-webkit-keyframes obj_1 {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+    100% {
+        -webkit-transform: translate(0%, -30px);
+    }
+}
+
+@-moz-keyframes obj_1 {
+    0% {
+        -moz-transform: translate(0%, 0%);
+    }
+    100% {
+        -moz-transform: translate(0%, -30px);
+    }
+}
+
+.loading_obj_2 {
+    animation: obj_2 1.2s alternate infinite;
+    -webkit-animation: obj_2 1.2s alternate infinite;
+    -moz-animation: obj_2 1.2s alternate infinite;
+}
+@keyframes obj_2 {
+    0% {
+        transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        transform: translate(0%, -50px);
+    }
+}
+@-webkit-keyframes obj_2 {
+    0% {
+        -webkit-transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        -webkit-transform: translate(0%, -50px);
+    }
+}
+
+@-moz-keyframes obj_2 {
+    0% {
+        -moz-transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        -moz-transform: translate(0%, -50px);
+    }
+}
+
+.loading_obj_3 {
+    animation: obj_3 ease-in-out 1.2s infinite alternate;
+    -webkit-animation: obj_3 ease-in-out 1.2s infinite alternate;
+    -moz-animation: obj_3 ease-in-out 1.2s infinite alternate;
+}
+@keyframes obj_3 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, -60px);
+    }
+}
+@-webkit-keyframes obj_3 {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+    100% {
+        -webkit-transform: translate(0%, -60px);
+    }
+}
+
+@-moz-keyframes obj_3 {
+    0% {
+        -moz-transform: translate(0%, 0%);
+    }
+    100% {
+        -moz-transform: translate(0%, -60px);
+    }
+}
+
+/* 文字点滅 */
+.loading_text {
+    font-family: asap, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-align: center;
+    animation: blinking 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* TOPcss */
+.lead {
+    position: relative;
+}
+.obj_1 {
+    position: absolute;
+    display: block;
+    top: -47%;
+    left: 3%;
+    width: 26%;
+    animation: pikopiko 4s steps(2, start) infinite;
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+.obj_2 {
+    position: absolute;
+    display: block;
+    top: -16%;
+    left: 39%;
+    width: 18%;
+    animation: pyonpyon 5s infinite ease;
+}
+
+@keyframes pyonpyon {
+    0% {
+        transform: translate(0, 0);
+    }
+    5% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0, -15px);
+    }
+    25% {
+        transform: translate(0, 0);
+    }
+    30% {
+        transform: translate(0, -15px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.obj_3 {
+    position: absolute;
+    display: block;
+    top: -46%;
+    right: 5%;
+    width: 23%;
+    animation: poyoyon3 2s infinite;
+    opacity: 1;
+}
+@keyframes poyoyon3 {
+    0%,
+    40% {
+        transform: skew(0deg, 0deg);
+    }
+    5% {
+        transform: skew(5deg, 5deg);
+    }
+    10% {
+        transform: skew(-4deg, -4deg);
+    }
+    15% {
+        transform: skew(3deg, 3deg);
+    }
+    20% {
+        transform: skew(-2deg, -2deg);
+    }
+    25% {
+        transform: skew(1deg, 1deg);
+    }
+    30% {
+        transform: skew(-0.6deg, -0.6deg);
+    }
+    35% {
+        transform: skew(0.3deg, 0.3deg);
+    }
+}
+.obj_4 {
+    position: absolute;
+    display: block;
+    top: 84%;
+    left: 7%;
+    width: 14%;
+    animation: poyoyon3 2.5s infinite;
+    opacity: 1;
+}
+@keyframes poyoyon3 {
+    0%,
+    40% {
+        transform: skew(0deg, 0deg);
+    }
+    5% {
+        transform: skew(5deg, 5deg);
+    }
+    10% {
+        transform: skew(-4deg, -4deg);
+    }
+    15% {
+        transform: skew(3deg, 3deg);
+    }
+    20% {
+        transform: skew(-2deg, -2deg);
+    }
+    25% {
+        transform: skew(1deg, 1deg);
+    }
+    30% {
+        transform: skew(-0.6deg, -0.6deg);
+    }
+    35% {
+        transform: skew(0.3deg, 0.3deg);
+    }
+}
+.obj_5 {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 44%;
+    width: 10%;
+    animation: poyon 1.2s infinite;
+}
+
+@keyframes poyon {
+    0% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+    15% {
+        transform: scale(0.9, 0.9) translate(0%, 5%);
+    }
+    30% {
+        transform: scale(1.3, 0.8) translate(0%, 10%);
+    }
+    50% {
+        transform: scale(0.8, 1.3) translate(0%, -10%);
+    }
+    70% {
+        transform: scale(1.1, 0.9) translate(0%, 5%);
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+}
+.obj_6 {
+    position: absolute;
+    display: block;
+    top: 75%;
+    right: 14%;
+    width: 19%;
+    animation: pikopiko 3s steps(2, start) infinite;
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+.obj_inner {
+    position: relative;
+    max-width: 1000px;
+    margin: 160px auto 0;
+    text-align: center;
+}
+.obj_inner p {
+    font-family: asap, sans-serif;
+    letter-spacing: 0.08em;
+    margin-top: 50px;
+}
+.lead_text1 {
+    font-size: 72px;
+    font-weight: 500;
+    margin-top: 0;
+}
+.lead_text2 {
+    font-size: 46px;
+    font-weight: 400;
+}
+.lead_text3 {
+    font-size: 72px;
+    font-weight: 500;
+}
+.lead_text4 {
+    font-size: 18px;
+    letter-spacing: 0.12em;
+}
+/*スクロールダウン全体の場所*/
+.scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 13%;
+    bottom: -40%;
+    /*全体の高さ*/
+    height: 60px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span {
+    font-family: asap, sans-serif;
+    font-size: 14px;
+
+    writing-mode: vertical-rl;
+    /*描画位置*/
+    position: absolute;
+    left: -6px;
+    top: -40px;
+    /*テキストの形状*/
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    height: 40px;
+    background: #333;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 40px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .obj_inner {
+        margin-top: 120px;
+    }
+    .obj_inner p {
+        margin-top: 40px;
+    }
+    .lead_text1 {
+        font-size: 62px;
+    }
+    .lead_text2 {
+        font-size: 42px;
+    }
+    .lead_text3 {
+        font-size: 62px;
+    }
+    .lead_text4 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .obj_1 {
+        top: -50%;
+        left: -2%;
+        width: 31%;
+    }
+    .obj_2 {
+        top: -40%;
+        left: 58%;
+        width: 42%;
+    }
+    .obj_3 {
+        top: 12%;
+        left: 3%;
+        width: 37%;
+    }
+    .obj_4 {
+        top: 90%;
+        left: 20%;
+        width: 24%;
+    }
+    .obj_5 {
+        top: 100%;
+        left: 64%;
+        width: 28%;
+    }
+    .obj_6 {
+        top: 63%;
+        right: 28%;
+        width: 15%;
+    }
+    .obj_inner {
+        margin-top: 0;
+    }
+    .obj_inner p {
+        letter-spacing: 0.08em;
+        margin-top: 80px;
+    }
+    .lead_text1 {
+        font-size: 48px;
+    }
+    .lead_text2 {
+        font-size: 30px;
+    }
+    .lead_text3 {
+        font-size: 44px;
+    }
+    .scrolldown {
+        display: none;
+    }
+}
+@media screen and (max-width: 375px) {
+    .main {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .obj_1 {
+        top: -49%;
+        left: 2%;
+        width: 53%;
+    }
+    .obj_2 {
+        top: -24%;
+        left: 56%;
+        width: 51%;
+    }
+    .obj_3 {
+        top: 22%;
+        left: -21%;
+        width: 53%;
+    }
+    .obj_4 {
+        top: 91%;
+        left: -3%;
+        width: 37%;
+    }
+    .obj_5 {
+        top: 101%;
+        left: 56%;
+        width: 46%;
+    }
+    .obj_6 {
+        top: 58%;
+        right: 6%;
+        width: 28%;
+    }
+}
+
+.about {
+    max-width: 610px;
+    margin: 140px auto 0;
+    position: relative;
+}
+.heading.underline {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333333;
+    width: 40px;
+}
+.heading_sp {
+    display: none;
+}
+.about_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.about_text {
+    text-align: left;
+    margin-top: 50px;
+    letter-spacing: 0.08em;
+    line-height: 1.688;
+}
+.about_icon {
+    width: 190px;
+}
+
+.skill {
+    max-width: 1000px;
+    margin-top: 90px;
+}
+.skill_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.skill_box {
+    margin-top: 60px;
+    padding: 0 10px;
+}
+.skill_heading {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.skill_icon1 {
+    margin: 0 auto;
+    width: 128px;
+}
+.skill_text {
+    letter-spacing: 0.08em;
+    line-height: 1.688;
+    text-align: left;
+    margin-top: 25px;
+}
+.skill_icon2 {
+    margin: 0 auto;
+    width: 108px;
+}
+.btnbox {
+    text-align: center;
+    margin-top: 55px;
+}
+@media screen and (max-width: 767px) {
+    .about {
+        max-width: 255px;
+        padding-top: 100px;
+    }
+    .heading.underline {
+        display: none;
+    }
+    .heading_sp {
+        display: block;
+        font-family: asap, sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about_flex {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .about_text {
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        line-height: 1.785;
+        margin: 40px auto 0;
+    }
+    .about_icon {
+        margin-top: 35px;
+        width: 235px;
+    }
+    .btnbox {
+        margin-top: 45px;
+    }
+    .skill {
+        margin: 70px auto 0;
+    }
+    .skill_box {
+        margin: 0;
+        padding-top: 30px;
+    }
+    .skill_flex {
+        flex-direction: column;
+    }
+    .skill_text {
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        line-height: 1.785;
+        margin-top: 30px;
+    }
+}
+
+.works {
+    max-width: 1000px;
+    margin: auto;
+}
+.works_line_top {
+    padding-top: 90px;
+}
+
+/* フェードイン */
+/* アニメーション前 */
+.u-fade-type-up {
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-up.is-active {
+    transition: 0.6s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.u-fade-type-up.is-active:nth-child(2) {
+    transition-delay: 0.5s;
+}
+.u-fade-type-up.is-active:nth-child(3) {
+    transition-delay: 0.8s;
+}
+.u-fade-type-up.is-active:nth-child(4) {
+    transition-delay: 1.1s;
+}
+.u-fade-type-up.is-active:nth-child(5) {
+    transition-delay: 1.4s;
+}
+.u-fade-type-up.is-active:nth-child(6) {
+    transition-delay: 1.7s;
+}
+.works_heading {
+    margin: 90px 0 40px;
+}
+.works_flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 58px;
+    padding-top: 40px;
+}
+.works_bg {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    aspect-ratio: 1 / 0.8;
+}
+.works_img {
+    width: 100%;
+    height: 63%;
+    text-align: center;
+}
+.works_img img {
+    height: 100%;
+    box-shadow: 4px 4px 5px rgb(0, 0, 0, 0.3);
+}
+.works_hover:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.works_text_1 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 0 10px;
+}
+.works_text_2 {
+    color: #666666;
+    font-family: asap, sans-serif;
+    font-size: 11px;
+}
+.works_line_under {
+    margin-top: 90px;
+    margin: 90px auto 0;
+}
+@media screen and (max-width: 767px) {
+    .works_line_top {
+        padding-top: 70px;
+    }
+    .works_heading {
+        margin: 70px 0 60px;
+    }
+    .works_flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .works_box {
+        max-width: 295px;
+        margin: auto;
+    }
+    .pc_only {
+        display: none;
+    }
+    /* フェードイン */
+    .u-fade-type-up {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    /* トリガー発火でis-activeを付与 */
+    .u-fade-type-up.is-active {
+        transition: 0.6s;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .u-fade-type-up.is-active:nth-child(2) {
+        transition-delay: 0.5s;
+    }
+    .u-fade-type-up.is-active:nth-child(3) {
+        transition-delay: 0.8s;
+    }
+    .works_line_under {
+        margin-top: 70px;
+    }
+}
+
+.contact {
+    max-width: 1366px;
+    margin: auto;
+    margin-top: 0;
+    padding-top: 70px;
+    position: relative;
+}
+.heading {
+    position: relative;
+}
+.contact_obj_1 {
+    position: absolute;
+    display: block;
+    top: 3%;
+    right: 5%;
+    width: 20%;
+    transform: rotate(-23deg);
+}
+.contact_text {
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 1.75;
+    padding: 60px 0 20px;
+    position: relative;
+}
+.form {
+    max-width: 440px;
+    margin: auto;
+}
+.form_item_flex {
+    flex-direction: column;
+}
+.form_item label {
+    display: block;
+    padding: 40px 0 13px;
+}
+.form_item input {
+    font-family: asap, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    padding: 16px;
+}
+.form_item textarea {
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%;
+    height: 140px;
+}
+.contact_tex2 {
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 1.75;
+    padding: 50px 0 65px;
+}
+
+/* contact送信ボタン */
+.contact_but {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 180px;
+    background: transparent;
+
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+button.contact_but.btn_color {
+    border: none;
+}
+.contact_but span {
+    position: relative;
+    z-index: 2; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    box-sizing: border-box;
+    width: 180px;
+    padding: 15px 48px 12px;
+    color: #333;
+    border: solid 1px #333;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+}
+
+.contact_obj_2 {
+    position: absolute;
+    display: block;
+    top: 60%;
+    left: -22px;
+    width: 24%;
+}
+
+@media screen and (max-width: 900px) {
+    .contact_obj_2 {
+        position: absolute;
+        display: block;
+        top: 56%;
+        width: 22%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .contact_obj_1 {
+        top: 4%;
+        right: 48px;
+        width: 26%;
+    }
+    .contact_text {
+        font-size: 14px;
+        line-height: 1.785;
+        padding: 70px 0 0;
+    }
+    .form {
+        max-width: 260px;
+        margin: auto;
+    }
+    .form_item label {
+        font-size: 14px;
+    }
+    .form_item input {
+        font-size: 14px;
+    }
+    .contact_tex2 {
+        font-size: 14px;
+        line-height: 1.785;
+        padding: 40px 0 0;
+    }
+    .contact_obj_2 {
+        top: 98%;
+        left: 2%;
+        width: 23%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .contact_obj_1 {
+        top: 3%;
+        right: 12%;
+        width: 31%;
+    }
+    .contact_obj_2 {
+        top: 101%;
+        left: 0%;
+        width: 31%;
+    }
+}

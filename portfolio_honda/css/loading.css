@@ -1,0 +1,110 @@
+@charset "utf-8";
+.loading {
+    max-width: 300px;
+    margin: 300px auto;
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed;
+    z-index: 100; */
+}
+.obj_1 {
+    width: 60px;
+}
+.obj_2 {
+    width: 60px;
+}
+.obj_3 {
+    width: 60px;
+}
+.obj_1 {
+    animation: obj_1 ease-in-out 3s infinite alternate;
+    -webkit-animation: obj_1 ease-in-out 3s infinite alternate;
+    -moz-animation: obj_1 ease-in-out 3s infinite alternate;
+}
+@keyframes obj_1 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, -30px);
+    }
+}
+@-webkit-keyframes obj_1 {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+    100% {
+        -webkit-transform: translate(0%, -30px);
+    }
+}
+
+@-moz-keyframes obj_1 {
+    0% {
+        -moz-transform: translate(0%, 0%);
+    }
+    100% {
+        -moz-transform: translate(0%, -30px);
+    }
+}
+
+.obj_2 {
+    animation: obj_2 0.6s alternate infinite;
+    -webkit-animation: obj_2 0.6s alternate infinite;
+    -moz-animation: obj_2 0.6s alternate infinite;
+}
+@keyframes obj_2 {
+    0% {
+        transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        transform: translate(0%, -60px);
+    }
+}
+@-webkit-keyframes obj_2 {
+    0% {
+        -webkit-transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        -webkit-transform: translate(0%, -60px);
+    }
+}
+
+@-moz-keyframes obj_2 {
+    0% {
+        -moz-transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        -moz-transform: translate(0%, -60px);
+    }
+}
+
+.obj_3 {
+    animation: obj_3 ease-in-out 2s infinite alternate;
+    -webkit-animation: obj_3 ease-in-out 2s infinite alternate;
+    -moz-animation: obj_3 ease-in-out 2s infinite alternate;
+}
+@keyframes obj_3 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, -30px);
+    }
+}
+@-webkit-keyframes obj_3 {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+    100% {
+        -webkit-transform: translate(0%, -30px);
+    }
+}
+
+@-moz-keyframes obj_3 {
+    0% {
+        -moz-transform: translate(0%, 0%);
+    }
+    100% {
+        -moz-transform: translate(0%, -30px);
+    }
+}

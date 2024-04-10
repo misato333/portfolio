@@ -164,8 +164,9 @@
         gap: 35px;
     }
     .works_box {
-        max-width: 295px;
+        /* max-width: 295px; */
         margin: auto;
+        padding: 0 30px;
     }
     .works_text {
         font-size: 14px;

@@ -721,8 +721,9 @@
         flex-direction: column;
     }
     .works_box {
-        max-width: 295px;
+        /* max-width: 295px; */
         margin: auto;
+        padding: 0 30px;
     }
     .pc_only {
         display: none;
